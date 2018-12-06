@@ -1,10 +1,13 @@
 $(document).ready(function() {
+
     $( ".cadastro" ).click(function() {
-        alert('fiz cadastro');
+        $('#formCadastro').show();
+        $('#formCadastroTicket').hide();
     });
 
     $( ".ticket" ).click(function() {
-        alert("fiz ticket");
+        $('#formCadastro').hide();
+        $('#formCadastroTicket').show();
     });
 });
 

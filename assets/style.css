@@ -1,45 +1,18 @@
-.bodyLogin {
+
+.home .bodyLogin, .bodyLogin {
     text-align: center;
-
-}
-.formularioLogin{
-    border: 1px solid #000000;
-    background:#cccccc;
-    width:150px;
-    height:20px;
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
 }
 
-input[type=text]:hover, textarea:hover{
-    background: #ffffff; border:1px solid #990000;
-}
-
-input[type=submit]{
-   background:#006699;
-   color:#ffffff;
-}
-
-input[type=text]{
-    border-radius:4px;
-    -moz-border-radius:4px;
-    -webkit-border-radius:4px;
-    box-shadow: 1px 1px 2px #333333;
-    -moz-box-shadow: 1px 1px 2px #333333;
-    -webkit-box-shadow: 1px 1px 2px #333333;
-    background: #cccccc;
-    border:1px solid #000000;
-    width:150px
-}
-.h1Login{
-    color: red;
-}
-
-.menuHome{
+.home .menuHome{
     display: inline-grid;
+}
+
+/* .visulizar .formulario form , */
+.home .formularioHome form {
+    display: none;
+}
+
+.home .formularioHome input[type=text]{
+    border-radius:4px;
 
 }
