@@ -29,7 +29,6 @@ if($sql->rowCount() > 0){
     <title>Login Estacionamento</title>
 
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
-    <script src="main.js"></script>
 </head>
 <body class="bodyLogin">
     <div class="h1Login"><br/><br/><br/>
