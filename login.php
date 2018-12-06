@@ -14,7 +14,7 @@ $sql->execute();
 if($sql->rowCount() > 0){
     $sql = $sql->fetch();
     $_SESSION['start'] = $sql;
-    header("Location: index.php");
+    header("Location: home.php");
 
 }else{
     echo "Usuário ou senha errados!";
@@ -31,7 +31,7 @@ if($sql->rowCount() > 0){
     <link rel="stylesheet" type="text/css" href="assets/style.css" />
     <script src="main.js"></script>
 </head>
-<body>
+<body class="bodyLogin">
     <div class="h1Login"><br/><br/><br/>
     <h1>ESTACIONAMENTO E SILVA</h1>
     </div>

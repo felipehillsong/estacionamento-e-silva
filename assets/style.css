@@ -1,4 +1,4 @@
-body {
+.bodyLogin {
     text-align: center;
 
 }
@@ -37,4 +37,9 @@ input[type=text]{
 }
 .h1Login{
     color: red;
+}
+
+.menuHome{
+    display: inline-grid;
+
 }
