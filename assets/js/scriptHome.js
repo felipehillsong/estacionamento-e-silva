@@ -2,11 +2,29 @@ $(document).ready(function() {
 
     $( ".cadastro" ).click(function() {
         $('#formCadastro').show();
-        $('#formCadastroTicket').hide();
+        $('#formCadastroServico').hide();
+        $('#formPesquisaClientes').hide();
+        $('#formPesquisaServicos').hide();
     });
 
-    $( ".ticket" ).click(function() {
+    $( ".servico" ).click(function() {
         $('#formCadastro').hide();
-        $('#formCadastroTicket').show();
+        $('#formCadastroServico').show();
+        $('#formPesquisaClientes').hide();
+        $('#formPesquisaServicos').hide();
+    });
+
+    $( ".pesquisaClientes" ).click(function() {
+        $('#formCadastro').hide();
+        $('#formCadastroServico').hide();
+        $('#formPesquisaClientes').show();
+        $('#formPesquisaServicos').hide();
+    });
+
+    $( ".pesquisaServicos" ).click(function() {
+        $('#formCadastro').hide();
+        $('#formCadastroServico').hide();
+        $('#formPesquisaClientes').hide();
+        $('#formPesquisaServicos').show();
     });
 });
