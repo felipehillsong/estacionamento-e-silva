@@ -27,24 +27,26 @@ if($sql->rowCount() > 0){
 <head>
     <meta charset="utf-8" />
     <title>Login Estacionamento</title>
-
-    <link rel="stylesheet" type="text/css" href="assets/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script type="text/javascript" src="assets/js/scriptHome.js"></script>
+    <script type="text/javascript" src="assets/js/bootstrap.min.js"></script>
 </head>
-<body class="bodyLogin">
+<body class="bodyLogin text-center">
     <div class="h1Login"><br/><br/><br/>
     <h1>ESTACIONAMENTO E SILVA</h1>
     </div>
-    <form method="POST"><br/><br/><br/><br/><br/><br/><br/><br/><br/>
-    Nome<br/>
-    <input required type="text" name="nome" placeholder="Digite seu nome" class="formularioLogin"/><br/><br/>
+    <form method="POST" class="form-signin">
+    <h2>Entre com seu login</h2>
+    <input required type="text" name="nome" placeholder="Digite seu nome" class="formularioLogin form-control" /><br/><br/>
 
-    Email<br/>
-    <input required type="email" name="email" placeholder="Digite seu email" class="formularioLogin"/><br/><br/>
+    <input required type="email" name="email" placeholder="Digite seu email" class="formularioLogin form-control"/><br/><br/>
 
-    Senha<br/>
-    <input required type="password" name="senha" placeholder="Digite sua senha"  class="formularioLogin"/><br/><br/>
+    <input required type="password" name="senha" placeholder="Digite sua senha"  class="formularioLogin form-control"/><br/><br/>
 
-    <input type="submit" value="Entrar" class="formularioLogin"/>
+
+    <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
     </form>
 
 </body>
