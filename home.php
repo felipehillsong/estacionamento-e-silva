@@ -73,13 +73,17 @@ if(isset($_POST['cadastro_cliente'])){
             <input type="text" name="placa" placeholder="Placa" class="form-control" required><br/><br/>
             <button class="btn" type="submit" name="cadastro_cliente">Enviar</button>
         </form>
+        <!--criamos o container para selecionar a div que queremos -->
         <div class="container">
             <form method="POST" id="formCadastroServico">
                 <h2>Serviço</h2>
+                <!-- criamos a row, ela esta separando a div em 12 colunas -->
                 <div class="row">
+                <!-- fazemos col-sm-8 col-md-10 col-lg-7 por exemplo para deixar um tamanho fixo para cada tipo de monitor, o input tera esses tamanhos quando começar a diminuir a tela -->
                     <div class="col-sm-8 col-md-10 col-lg-7">
                         <input type="text" name="nome" placeholder="Nome do cliente" class="form-control">
                     </div>
+                    <!-- o botão tera esse tamanho quando começar a diminuir a tela -->
                     <div class="col-sm-4 col-md-2 col-lg-5">
                         <button class="btn" type="submit">Pesquisar</button>
                     </div>
