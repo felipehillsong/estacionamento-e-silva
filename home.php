@@ -70,16 +70,30 @@ if(isset($_POST['cadastro_cliente'])){
             <input type="text" name="cpf" placeholder="CPF" class="form-control" required>
             <input type="text" name="telefone" placeholder="Telefone" class="form-control" required>
             <input type="text" name="veiculo" placeholder="Veículo" class="form-control" required>
-            <input type="text" name="placa" placeholder="Placa" class="form-control" required><br/><br/ >
+            <input type="text" name="placa" placeholder="Placa" class="form-control" required><br/><br/>
             <button class="btn" type="submit" name="cadastro_cliente">Enviar</button>
         </form>
-        <form method="POST" id="formCadastroServico">
-            <h2>Serviço</h2>
-            <input type="text" name="nome" placeholder="Cliente" class="form-control" required>
-            <input type="text" name="telefone" placeholder="Veículo" class="form-control" required>
-            <input type="text" name="endereco" placeholder="Modalidade" class="form-control" required><br/><br/>
-            <button class="btn" type="submit">Enviar</button >
-        </form>
+        <div class="container">
+            <form method="POST" id="formCadastroServico">
+                <h2>Serviço</h2>
+                <div class="row">
+                    <div class="col-sm-8 col-md-10 col-lg-7">
+                        <input type="text" name="nome" placeholder="Nome do cliente" class="form-control" required>
+                    </div>
+                    <div class="col-sm-4 col-md-2 col-lg-5">
+                        <button class="btn" type="submit">Pesquisar</button>
+                    </div>
+                </div><br/>
+                <div class="row">
+                    <div class="col-sm-8 col-md-10 col-lg-7">
+                        <input type="text" name="nome" placeholder="Placa do veiculo" class="form-control" required>
+                    </div>
+                    <div class="col-sm-4 col-md-2 col-lg-5">
+                        <button class="btn" type="submit">Pesquisar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
         <form method="POST" id="formPesquisaClientes">
             <h2>Pesquisa de Cliente</h2>
             <input type="text" name="nome" placeholder="Nome" class="form-control" required>
@@ -93,6 +107,7 @@ if(isset($_POST['cadastro_cliente'])){
             <input type="text" name="nome" placeholder="Número do Serviço" class="form-control" required><br/><br/>
             <button class="btn" type="submit">Enviar</button>
         </form>
+
     </div>
 </body>
 

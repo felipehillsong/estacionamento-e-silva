@@ -38,7 +38,7 @@ if($sql->rowCount() > 0){
     <h1>ESTACIONAMENTO E SILVA</h1>
     </div>
     <form method="POST" class="form-signin">
-    <h2>Entre com seu login</h2>
+    <h2>Entre com seu login:</h2>
     <input required type="text" name="nome" placeholder="Digite seu nome" class="formularioLogin form-control" /><br/><br/>
 
     <input required type="email" name="email" placeholder="Digite seu email" class="formularioLogin form-control"/><br/><br/>
