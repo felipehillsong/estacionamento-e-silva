@@ -78,7 +78,7 @@ if(isset($_POST['cadastro_cliente'])){
                 <h2>Serviço</h2>
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="nome" placeholder="Nome do cliente" class="form-control" required>
+                        <input type="text" name="nome" placeholder="Nome do cliente" class="form-control">
                     </div>
                     <div class="col-sm-4 col-md-2 col-lg-5">
                         <button class="btn" type="submit">Pesquisar</button>
@@ -86,7 +86,7 @@ if(isset($_POST['cadastro_cliente'])){
                 </div><br/>
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="nome" placeholder="Placa do veiculo" class="form-control" required>
+                        <input type="text" name="nome" placeholder="Placa do veiculo" class="form-control">
                     </div>
                     <div class="col-sm-4 col-md-2 col-lg-5">
                         <button class="btn" type="submit">Pesquisar</button>
