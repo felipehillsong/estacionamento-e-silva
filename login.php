@@ -14,7 +14,7 @@ $sql->execute();
 if($sql->rowCount() > 0){
     $sql = $sql->fetch();
     $_SESSION['start'] = $sql;
-    header("Location: home.php");
+    header("Location: cadastro.php");
 
 }else{
     echo "Usuário ou senha errados!";

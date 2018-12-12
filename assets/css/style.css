@@ -9,19 +9,16 @@
 
 
 /* .visulizar .formulario form , */
-.home .formularioHome form {
-  display: none;
-}
 
-.home .formularioHome input[type=text]{
+.home .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico input[type=text]{
     border-radius:4px;
 
 }
 
-.formularioHome{
+.formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico{
     text-align: center;
 }
-.form-signin, .formularioHome{
+.form-signin, .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico{
     max-width: 330px;
     margin: auto;
     padding: 15px;
