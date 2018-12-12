@@ -32,13 +32,28 @@ if(isset($_POST['cadastro_cliente'])){
         echo "Usuário ja cadastrado!";
     }
 }
+
+if(isset($_POST['btn_pesquisa_para_servico'])){
+    $nome = $_POST['nome'];
+    $sql = $pdo->prepare("SELECT * FROM cadastro WHERE nome = :nome");
+    $sql->bindValue(":nome", $nome);
+    $sql->execute();
+    if($sql->rowCount() > 0){
+        $sql = $sql->fetchAll(PDO::FETCH_ASSOC);
+        //Nesse caso o foreach esta percorrendo todas as linhas do resultado pois o array é bidimenssional. Ai os resultados sao guardados em $data, ai depois eu passei para a variavel $cliente
+        foreach($sql as $data)
+        {
+            $cliente = $data;
+        }
+    }
+}
 ?>
 <!DOCTYPE html>
 <html>
 
 <head>
     <meta charset="utf-8" />
-    <title>Login Estacionamento</title>
+    <title>Home</title>
 
     <link rel="stylesheet" type="text/css" href="assets/css/style.css" />
     <link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css" />
@@ -85,17 +100,28 @@ if(isset($_POST['cadastro_cliente'])){
                     </div>
                     <!-- o botão tera esse tamanho quando começar a diminuir a tela -->
                     <div class="col-sm-4 col-md-2 col-lg-5">
-                        <button class="btn" type="submit">Pesquisar</button>
+                        <button class="btn" type="submit" name="btn_pesquisa_para_servico">Pesquisar</button>
                     </div>
+
                 </div><br/>
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="nome" placeholder="Placa do veiculo" class="form-control">
+                        <input type="text" name="placa" placeholder="Placa do veiculo" class="form-control">
                     </div>
                     <div class="col-sm-4 col-md-2 col-lg-5">
-                        <button class="btn" type="submit">Pesquisar</button>
+                        <button class="btn" type="submit">Pesquisar</button><br/><br/>
                     </div>
                 </div>
+
+                <div class="row">
+                    <div class="col-sm-8 col-md-10 col-lg-7">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" value="<?php echo $cliente['nome']; ?>">
+                    </div>
+                    <!-- o botão tera esse tamanho quando começar a diminuir a tela -->
+                    <div class="col-sm-4 col-md-2 col-lg-5">
+                        <button class="btn" type="submit" name="btn_pesquisa_para_servico">Serviço</button>
+                    </div>
+
             </form>
         </div>
         <form method="POST" id="formPesquisaClientes">
@@ -116,4 +142,3 @@ if(isset($_POST['cadastro_cliente'])){
 </body>
 
 </html>
-

@@ -10,6 +10,7 @@ $(document).ready(function() {
     $( ".servico" ).click(function() {
         $('#formCadastro').hide();
         $('#formCadastroServico').show();
+        $('#pesquisaEmServico').show();
         $('#formPesquisaClientes').hide();
         $('#formPesquisaServicos').hide();
     });
