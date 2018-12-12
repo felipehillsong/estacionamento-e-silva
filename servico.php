@@ -51,7 +51,7 @@ if(isset($_POST['btn_pesquisa_para_servico'])){
 
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; ?>">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
                     </div>
                     <!-- o botão tera esse tamanho quando começar a diminuir a tela -->
                     <div class="col-sm-4 col-md-2 col-lg-5">
