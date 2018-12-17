@@ -17,8 +17,8 @@
             <a class="py-2" href="#"></a>
             <a class="py-2 d-none d-md-inline-block cadastro" href="cadastro.php">Cadastro de Clientes</a>
             <a class="py-2 d-none d-md-inline-block servico" href="servico.php">Serviços</a>
-            <a class="py-2 d-none d-md-inline-block pesquisaClientes" href="pesquisaCliente.php">Pesquisa de Clientes</a>
-            <a class="py-2 d-none d-md-inline-block pesquisaServicos" href="pesquisaServico.php">Pesquisa de Serviços</a>
+            <a class="py-2 d-none d-md-inline-block pesquisaClientes" href="pesquisa-cliente.php">Pesquisa de Clientes</a>
+            <a class="py-2 d-none d-md-inline-block pesquisaServicos" href="pesquisa-servico.php">Pesquisa de Serviços</a>
             <a class="py-2 d-none d-md-inline-block" href="sair.php">Sair</a>
         </div>
     </nav>
