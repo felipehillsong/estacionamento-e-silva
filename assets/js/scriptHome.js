@@ -1,31 +1,15 @@
-$(document).ready(function() {
-
-    $( ".cadastro" ).click(function() {
-        $('#formCadastro').show();
-        $('#formCadastroServico').hide();
-        $('#formPesquisaClientes').hide();
-        $('#formPesquisaServicos').hide();
-    });
-
-    $( ".servico" ).click(function() {
-        $('#formCadastro').hide();
-        $('#formCadastroServico').show();
-        $('#pesquisaEmServico').show();
-        $('#formPesquisaClientes').hide();
-        $('#formPesquisaServicos').hide();
-    });
-
-    $( ".pesquisaClientes" ).click(function() {
-        $('#formCadastro').hide();
-        $('#formCadastroServico').hide();
-        $('#formPesquisaClientes').show();
-        $('#formPesquisaServicos').hide();
-    });
-
-    $( ".pesquisaServicos" ).click(function() {
-        $('#formCadastro').hide();
-        $('#formCadastroServico').hide();
-        $('#formPesquisaClientes').hide();
-        $('#formPesquisaServicos').show();
-    });
+$(function() {
+	$('#button').on('click', function() {
+		let input1 = $('#input1').val();//pega o valor do input pelo id
+		let input2 = $('#input2').val();//pega o valor do input pelo id
+        let input3 = $('#input3').val();//pega o valor do input pelo id
+        let input4 = $('#input4').val();//pega o valor do input pelo id
+        let input5 = $('#input5').val();//pega o valor do input pelo id
+		if (input1 !== '' && input2 !== '' && input3 !== '' && input4 !== '' && input5 !== '') {//verifica se os inputs estão vazios
+			window.location.href = 'cadastro-servico.php'; //se estuver preenchidos ele redireciona para a pagina cadastro-servico
+		} else {
+			alert('Cliente não encontrado!'); //se nao ele emite uma mensagem de erro
+			return false;
+		}
+	});
 });
