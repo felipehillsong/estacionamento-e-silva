@@ -15,10 +15,10 @@
 
 }
 
-.formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico{
+.formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico, .formCadastrando-Servico{
     text-align: center;
 }
-.form-signin, .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico{
+.form-signin, .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico, .formCadastrando-Servico{
     max-width: 330px;
     margin: auto;
     padding: 15px;

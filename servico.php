@@ -18,10 +18,14 @@ if(isset($_POST['btn_pesquisa_para_servico_nome'])){
         foreach($sql as $data)
         {
             $cliente = $data;
-        }
+        }         
+            
     }else{
         $cliente['nome'] = "Usuário Inexistente!";         
-    }
+    }   
+
+    $_SESSION['nome'] = $nome;   
+
 }
 
 if(isset($_POST['btn_pesquisa_para_servico_placa'])){
@@ -34,12 +38,14 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
         //Nesse caso o foreach esta percorrendo todas as linhas do resultado pois o array é bidimenssional. Ai os resultados sao guardados em $data, ai depois eu passei para a variavel $cliente
         foreach($sql as $data)
         {
-            $cliente = $data;
-        }
+            $cliente = $data;           
+        }    
+         
     }else{
-        $cliente['nome'] = "Usuário Inexistente!";             
-    }
-}
+        $cliente['placa'] = "Usuário Inexistente!";             
+    }  
+    $_SESSION['placa'] = $placa;       
+} 
 ?>
         <div class="formularioServico">
         <div class="container">
@@ -68,7 +74,7 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
 
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input1" disabled value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa1" placeholder="Resultado" class="form-control" id="input1" disabled value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
                     </div>
                     <div class="col-sm-8 col-md-10 col-lg-7">
                         <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input2" disabled value="<?php echo isset($cliente['cpf']) ? $cliente['cpf'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
