@@ -28,10 +28,30 @@ if(isset($_POST['cadastro_cliente'])){
     $sql->bindValue(":telefone", $telefone);
     $sql->bindValue(":veiculo", $veiculo);
     $sql->bindValue(":placa", $placa);
-    $sql->execute();
-    }else{
-        echo "Usuário ja cadastrado!";
-    }
+    $sql->execute(); 
+    ?>
+    <div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php echo "Usuário cadastrado com sucesso!"; ?>
+    <button class="close" data-dismiss="alert" aria-label="fechar">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    <?php  
+    
+
+    }else{?>
+        <div class="container">
+        <div class="alert alert-danger alert-dismissible fade show" role="alert">
+        <?php echo "Usuário ja Cadastrado!"; ?>
+        <button class="close" data-dismiss="alert" aria-label="fechar">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        </div>
+        <?php        
+    }    
 }
 ?>
         <div class="formularioCadastro">
