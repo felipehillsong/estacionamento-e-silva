@@ -25,8 +25,7 @@ if($sql->rowCount() > 0){
     </button>
     </div>
     </div>
-    <?php
-    
+    <?php    
 }
 
 }

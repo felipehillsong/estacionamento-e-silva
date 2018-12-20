@@ -24,9 +24,7 @@ if(isset($_POST['btn_pesquisa_para_servico_nome'])){
         $_SESSION['placa'] = $cliente['placa'];
     }else{
         $cliente['nome'] = "Usuário Inexistente!";         
-    }   
-     
-        
+    }           
 
 }
 
@@ -48,8 +46,7 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
          
     }else{
         $cliente['placa'] = "Usuário Inexistente!";             
-    }  
-   
+    }    
          
 } 
 ?>
@@ -98,7 +95,6 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
                     <div class="col-sm-4 col-md-2 col-lg-5">
                         <button class="btn" type="button" id="button" name="btn_pesquisa_para_servico">Serviço</button>
                     </div>
-
             </form>
         </div>
         </div>
