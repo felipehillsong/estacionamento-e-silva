@@ -15,14 +15,28 @@
 
 }
 
-.formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico, .formCadastrando-Servico{
+.formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico, .formCadastrando-Servico,{
     text-align: center;
 }
-.form-signin, .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico, .formCadastrando-Servico{
+.form-signin, .formularioCadastro, .formularioServico, .formularioPesquisaCliente, .formularioPesquisaServico{
     max-width: 330px;
     margin: auto;
     padding: 15px;
     width: 100%;
+}
+.formCadastrando-Servico{
+  max-width: 330px;  
+  padding: 15px;
+  width: 100%;  
+}
+.cadastroServicoCenter{
+  text-align: center;
+}
+#cadastrandoone{
+  max-width: 330px;
+  margin: auto;
+  padding: 15px;
+  width: 100%;
 }
 
 

@@ -16,12 +16,26 @@ if($sql->rowCount() > 0){
     $_SESSION['start'] = $sql;
     header("Location: cadastro.php");
 
-}else{
-    echo "Usuário ou senha errados!";
+}else{?>
+    <div class="container">
+    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+    <?php echo "Usuário ou senha errados!"; ?>
+    <button class="close" data-dismiss="alert" aria-label="fechar">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    <?php
+    
 }
 
 }
 ?>
+
+
+
+
+
 <!DOCTYPE html>
 <html>
 <head>

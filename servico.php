@@ -20,7 +20,8 @@ if(isset($_POST['btn_pesquisa_para_servico_nome'])){
             $cliente = $data;
         }         
         $_SESSION['nome'] = $cliente['nome'];
-        $_SESSION['placa'] = $cliente['placa']; 
+        $_SESSION['veiculo'] = $cliente['veiculo'];
+        $_SESSION['placa'] = $cliente['placa'];
     }else{
         $cliente['nome'] = "Usuário Inexistente!";         
     }   
@@ -42,7 +43,9 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
             $cliente = $data;           
         }    
         $_SESSION['nome'] = $cliente['nome'];
+        $_SESSION['veiculo'] = $cliente['veiculo'];
         $_SESSION['placa'] = $cliente['placa'];
+         
     }else{
         $cliente['placa'] = "Usuário Inexistente!";             
     }  
