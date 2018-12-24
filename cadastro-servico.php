@@ -6,22 +6,10 @@ if (empty($_SESSION['start'])) {
     header("Location:login.php");
 }
 ?>
-     <div class="container-fluid">   
-     <div id="cadastrandoone">
-     <h2>Cadastrar Serviços</h2>
-     <form>
-     <select class="form-control form-control-lg">
-    <option>Selecione o Serviço</option>
-    <option>Mensalista</option>
-    <option>Diarista</option>
-    <option>Horista</option>
-    </select>    
-    </form>
-     </div>   
-     <div class="container">                 
-     <form class="formCadastrando-Servico">    
-     <div class="row">
-     <div class="col-sm-8 col-md-10 col-lg-7">
+<div class="container" id="cadastrandoone">  
+<div class="row">
+    <div class="col-sm-4">
+    <div class="col-sm-8 col-md-10 col-lg-7">
      <h6 class="cadastroServicoCenter">Cliente</h6><input type="text" class="form-control" readonly value="<?php echo $_SESSION['nome']; ?>">
      </div>
      <div class="col-sm-8 col-md-10 col-lg-7">
@@ -29,10 +17,23 @@ if (empty($_SESSION['start'])) {
      </div>    
      <div class="col-sm-8 col-md-10 col-lg-7">
      <h6 class="cadastroServicoCenter">Placa</h6 ><input type="text" class="form-control" readonly value="<?php echo $_SESSION['placa']; ?>">
-     </div>                
-     </div>
      </div>     
-</div>
+    </div>
+    <div class="col-sm-4">
+    <h2>Cadastrar Serviços</h2>
+     <form method="POST">
+     <select class="form-control form-control-lg" name="servico">
+    <option>Selecione o Serviço</option>
+    <option>Mensalista</option>
+    <option>Diarista</option>
+    <option>Horista</option>
+    </select>    
+    </form>
+    </div>
+    
+
+
+
 
 </body>
 </html>

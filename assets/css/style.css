@@ -32,10 +32,8 @@
 .cadastroServicoCenter{
   text-align: center;
 }
-#cadastrandoone{
-  max-width: 330px;
-  margin: auto;
-  padding: 15px;
+#cadastrandoone{  
+  padding: 30px;
   width: 100%;
 }
 
