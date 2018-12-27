@@ -5,8 +5,9 @@ include_once("header.php");
 if (empty($_SESSION['start'])) {
     header("Location:login.php");
 }
+if(isset($_POST['servico']))
 ?>
-<div class="container" id="cadastrandoone">  
+<div class="container" id="cadastrandoone">
 <div class="row">
     <div class="col-sm-4">
     <div class="col-sm-8 col-md-10 col-lg-7">
@@ -24,16 +25,12 @@ if (empty($_SESSION['start'])) {
      <form method="POST">
      <select class="form-control form-control-lg" name="servico">
     <option>Selecione o Serviço</option>
-    <option>Mensalista</option>
-    <option>Diarista</option>
-    <option>Horista</option>
+    <option value="0">Mensalista</option>
+    <option value="1">Diarista</option>
+    <option value="2">Horista</option>
     </select>    
     </form>
-    </div>
-    
-
-
-
+    </div> 
 
 </body>
 </html>
