@@ -5,7 +5,9 @@ include_once("header.php");
 if (empty($_SESSION['start'])) {
     header("Location:login.php");
 }
-if(isset($_POST['servico']))
+if(isset($_POST['btn_cadastro-servico'])){
+    
+}
 ?>
 <div class="container" id="cadastrandoone">
 <div class="row">
@@ -28,8 +30,11 @@ if(isset($_POST['servico']))
     <option value="0">Mensalista</option>
     <option value="1">Diarista</option>
     <option value="2">Horista</option>
-    </select>    
-    </form>
+    </select><br/>
+    <div id="button-cadastro-servico">
+    <button class="btn" type="button"  name="btn_cadastro-servico">Serviço</button>   
+    </div>
+    </form>                          
     </div> 
 
 </body>
