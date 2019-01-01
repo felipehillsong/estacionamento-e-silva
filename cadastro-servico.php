@@ -5,8 +5,17 @@ include_once("header.php");
 if (empty($_SESSION['start'])) {
     header("Location:login.php");
 }
-if(isset($_POST['btn_cadastro-servico'])){
-    
+if(isset($_POST['servico'])){
+    $servico = $_POST['servico'];
+
+    if($servico == 'Mensalista'){
+    $sql = $pdo->prepare("INSERT INTO historico (servico) VALUES (:servico)");
+    $sql->bindValue(":servico", $servico);    
+    $sql->execute();  
+    }else{
+        echo "Outra coisa";
+    }
+   
 }
 ?>
 <div class="container" id="cadastrandoone">
@@ -27,15 +36,19 @@ if(isset($_POST['btn_cadastro-servico'])){
      <form method="POST">
      <select class="form-control form-control-lg" name="servico">
     <option>Selecione o Serviço</option>
-    <option value="0">Mensalista</option>
-    <option value="1">Diarista</option>
-    <option value="2">Horista</option>
+    <option value="Mensalista">Mensalista</option>
+    <option value="Diarista">Diarista</option>
+    <option value="Horista">Horista</option>
     </select><br/>
     <div id="button-cadastro-servico">
-    <button class="btn" type="button"  name="btn_cadastro-servico">Serviço</button>   
+    <button class="btn" type="submit" name="btn_cadastro-servico">Serviço</button>   
     </div>
-    </form>                          
+    </form>    <br/>
+    <div>
+        <input type="text" class="form-control" readonly name="servico" />
+    </div>                      
     </div> 
+   
 
 </body>
 </html>

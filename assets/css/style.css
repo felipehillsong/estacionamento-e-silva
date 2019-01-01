@@ -36,9 +36,8 @@
   padding: 30px;
   width: 100%;
 }
-#button-cadastro-servico{
-  text-align: center;  
-  
+#button-cadastro, #button-cadastro-servico, #button-pesquisa, #button-pesquisa-servico{
+  text-align: center;    
 }
 
 

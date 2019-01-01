@@ -14,7 +14,9 @@ if(empty($_SESSION['start'])){
             <input type="text" name="cpf" placeholder="CPF" class="form-control" required>
             <input type="text" name="veiculo" placeholder="Veículo" class="form-control" required>
             <input type="text" name="placa" placeholder="Placa" class="form-control"><br/><br/>
+            <div id="button-pesquisa">
             <button class="btn" type="submit">Enviar</button>
+            </div>
         </form>
         </div>
     </body>

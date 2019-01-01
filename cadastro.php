@@ -62,7 +62,9 @@ if(isset($_POST['cadastro_cliente'])){
             <input type="text" name="telefone" placeholder="Telefone" class="form-control" required>
             <input type="text" name="veiculo" placeholder="Veículo" class="form-control" required>
             <input type="text" name="placa" placeholder="Placa" class="form-control" required><br/><br/>
+            <div id="button-cadastro">
             <button class="btn" type="submit" name="cadastro_cliente">Enviar</button>
+            </div>
         </form>
         </div>
 

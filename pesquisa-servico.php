@@ -10,7 +10,9 @@ if(empty($_SESSION['start'])){
         <form method="POST" id="formPesquisaServicos">
             <h2>Pesquisa de Serviço</h2>
             <input type="text" name="nome" placeholder="Número do Serviço" class="form-control" required><br/><br/>
+            <div id="button-pesquisa-servico">
             <button class="btn" type="submit">Enviar</button>
+            </div>
         </form>
 </div>
     </body>
