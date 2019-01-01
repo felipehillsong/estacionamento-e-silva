@@ -2,12 +2,12 @@
 require 'config.php';
 session_start();
 
-if(!empty($_POST['email']) && !empty($_POST['senha'])){
-$email = $_POST['email'];
+if(!empty($_POST['usuario']) && !empty($_POST['senha'])){
+$usuario = $_POST['usuario'];
 $senha = $_POST['senha'];
 
-$sql = $pdo->prepare("SELECT * FROM usuarios WHERE email = :email AND senha = :senha");
-$sql->bindValue(":email", $email);
+$sql = $pdo->prepare("SELECT * FROM usuarios WHERE usuario = :usuario AND senha = :senha");
+$sql->bindValue(":usuario", $usuario);
 $sql->bindValue(":senha", $senha);
 $sql->execute();
 
@@ -31,10 +31,6 @@ if($sql->rowCount() > 0){
 }
 ?>
 
-
-
-
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -52,12 +48,9 @@ if($sql->rowCount() > 0){
     </div>
     <form method="POST" class="form-signin">
     <h2>Entre com seu login:</h2>
-    <input required type="text" name="nome" placeholder="Digite seu nome" class="formularioLogin form-control" /><br/><br/>
-
-    <input required type="email" name="email" placeholder="Digite seu email" class="formularioLogin form-control"/><br/><br/>
+    <input required type="text" name="usuario" placeholder="Digite seu usuário" class="formularioLogin form-control" /><br/><br/>    
 
     <input required type="password" name="senha" placeholder="Digite sua senha"  class="formularioLogin form-control"/><br/><br/>
-
 
     <button class="btn btn-lg btn-primary btn-block" type="submit">Entrar</button>
     </form>
