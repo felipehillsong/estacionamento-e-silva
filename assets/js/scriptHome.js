@@ -23,9 +23,15 @@ $(document).ready(function()
 			$("#servicos").show();
 			$('#servicos').val("Mensalista");
         }
-        else
+        if($(this).val() == "Diarista")
         {
-            $("#servicos").hide();
+            $("#servicos").show();
+			$('#servicos').val("Diarista");
+        }
+        if($(this).val() == "Horista")
+        {
+            $("#servicos").show();
+			$('#servicos').val("Horista");
         }
             });
                       $("#servicos").hide();
