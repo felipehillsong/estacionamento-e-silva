@@ -14,8 +14,7 @@ if(isset($_POST['servico'])){
     $sql->execute();  
     }else{
         echo "Outra coisa";
-    }
-   
+    }   
 }
 ?>
 <div class="container" id="cadastrandoone">
@@ -34,7 +33,8 @@ if(isset($_POST['servico'])){
     <div class="col-sm-4">
     <h2>Cadastrar Serviços</h2>
      <form method="POST">
-     <select class="form-control form-control-lg" name="servico">
+     <label for="servico"></label>
+     <select class="form-control form-control-lg" name="servico" id="servico">
     <option>Selecione o Serviço</option>
     <option value="Mensalista">Mensalista</option>
     <option value="Diarista">Diarista</option>
@@ -43,10 +43,11 @@ if(isset($_POST['servico'])){
     <div id="button-cadastro-servico">
     <button class="btn" type="submit" name="btn_cadastro-servico">Serviço</button>   
     </div>
-    </form>    <br/>
-    <div>
-        <input type="text" class="form-control" readonly name="servico" />
-    </div>                      
+    <div><br>
+        <input type="text" class="form-control" readonly name="servicos" id="servicos" />
+    </div>
+    </form><br/>
+                          
     </div> 
    
 

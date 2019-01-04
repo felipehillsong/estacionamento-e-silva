@@ -13,3 +13,20 @@ $(function() {
 		}
 	});
 });
+
+$(document).ready(function()
+                  {
+                  $("#servico").change(function()
+        {
+            if($(this).val() == "Mensalista")
+        {
+			$("#servicos").show();
+			$('#servicos').val("Mensalista");
+        }
+        else
+        {
+            $("#servicos").hide();
+        }
+            });
+                      $("#servicos").hide();
+});
