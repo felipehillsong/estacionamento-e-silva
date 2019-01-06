@@ -20,7 +20,9 @@ $(document).ready(function()
         {
             if($(this).val() == "Mensalista")
         {
-			$("#servicos").show();
+            $("#servicos").show();
+            $("#teste").show();
+            $('#teste').val("teste");
 			$('#servicos').val("Mensalista");
         }
         if($(this).val() == "Diarista")

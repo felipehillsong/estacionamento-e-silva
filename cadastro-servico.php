@@ -31,25 +31,27 @@ if(isset($_POST['servico'])){
      </div>     
     </div>
     <div class="col-sm-4">
-    <h2>Cadastrar Serviços</h2>
-     <form method="POST">
+    <h2>Cadastrar Serviços</h2>     
      <label for="servico"></label>
      <select class="form-control form-control-lg" name="servico" id="servico">
     <option>Selecione o Serviço</option>
     <option value="Mensalista">Mensalista</option>
     <option value="Diarista">Diarista</option>
     <option value="Horista">Horista</option>
-    </select><br/>
-    <div id="button-cadastro-servico">
-    <button class="btn" type="submit" name="btn_cadastro-servico">Serviço</button>   
-    </div>
+    </select><br/>    
     <div><br>
         <input type="text" class="form-control" readonly name="servicos" id="servicos" />
+    </div><br/>
+    <div id="button-cadastro-servico">
+    <button class="btn" type="submit" name="btn_cadastro-servico">Serviço</button>   
+    </div>                         
+    </div>    
+       
+    <div class="container" id="cadastrandoone">
+<div class="row">
+    <div class="col-sm-4">
+    <input type="date" lass="form-control" id="teste" />
     </div>
-    </form><br/>
-                          
-    </div> 
-   
-
+    
 </body>
 </html>
