@@ -110,7 +110,7 @@ if(isset($_POST['btn_cadastro-servico'])){
     <h6>DIA DA SAÍDA</h6>
     </div>
     <div class="col-sm-4">    
-    <input type="time" class="form-control" id="resultadoTempo2" required/>
+    <input type="time" class="form-control" id="resultadoTempo2" readonly required />
     <h6>HORA DA SAÍDA</h6>
     </div>  
     </div>      
