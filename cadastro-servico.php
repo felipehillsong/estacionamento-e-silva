@@ -2,20 +2,61 @@
 require 'config.php';
 session_start();
 include_once("header.php");
-if (empty($_SESSION['start'])) {
+if (empty($_SESSION['start'])){
     header("Location:login.php");
 }
-if(isset($_POST['servico'])){
+if(isset($_POST['btn_cadastro-servico'])){
     $servico = $_POST['servico'];
 
     if($servico == 'Mensalista'){
     $sql = $pdo->prepare("INSERT INTO historico (servico) VALUES (:servico)");
     $sql->bindValue(":servico", $servico);    
-    $sql->execute();  
-    }else{
-        echo "Outra coisa";
-    }   
-}
+    $sql->execute(); 
+    ?>
+    <div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php echo "Serviço cadastrado com sucesso!"; ?>
+    <button class="close" data-dismiss="alert" aria-label="fechar">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    <?php 
+    }
+
+    if($servico == 'Diarista'){
+        $sql = $pdo->prepare("INSERT INTO historico (servico) VALUES (:servico)");
+        $sql->bindValue(":servico", $servico);    
+        $sql->execute();  
+        ?>
+        <div class="container">
+        <div class="alert alert-success alert-dismissible fade show" role="alert">
+        <?php echo "Serviço cadastrado com sucesso!"; ?>
+        <button class="close" data-dismiss="alert" aria-label="fechar">
+        <span aria-hidden="true">&times;</span>
+        </button>
+        </div>
+        </div>
+        <?php 
+        }
+        
+        if($servico == 'Horista'){
+            $sql = $pdo->prepare("INSERT INTO historico (servico) VALUES (:servico)");
+            $sql->bindValue(":servico", $servico);    
+            $sql->execute();  
+            ?>
+            <div class="container">
+            <div class="alert alert-success alert-dismissible fade show" role="alert">
+            <?php echo "Serviço cadastrado com sucesso!"; ?>
+            <button class="close" data-dismiss="alert" aria-label="fechar">
+            <span aria-hidden="true">&times;</span>
+            </button>
+            </div>
+            </div>
+            <?php 
+            }
+
+}   
 ?>
 <div class="container" id="cadastrandoone">
 <div class="row">
@@ -43,8 +84,7 @@ if(isset($_POST['servico'])){
     <div><br>
         <input type="text" class="form-control" readonly name="servicos" id="servicos" />
     </div><br/>                           
-    </div>    
-       
+    </div>         
     <div class="container" id="cadastrandoone">
 <div class="row">
     <div class="col-sm-4">   
@@ -52,15 +92,27 @@ if(isset($_POST['servico'])){
     <h6>DIA DA ENTRADA</h6>
     </div>
     <div class="col-sm-4">    
-    <input type="time" class="form-control" id="tempo2" />
+    <input type="time" class="form-control" id="tempo2" required/>
     <h6>HORA DA ENTRADA</h6>
     </div>
     <div class="col-sm-2">
     <div id="button-cadastro-servico">
-    <button class="btn" type="submit" name="btn_cadastro-servico">Salvar</button>   
+    <button class="btn" type="submit" name="btn_cadastro-servico">Salvar</button>
     </div>  
     </div>
     </form>
     <div>
+</div>
+    <div class="container"><br><br>
+<div class="row">
+    <div class="col-sm-4">   
+    <input type="text" class="form-control" readonly id="resultadoTempo" />
+    <h6>DIA DA SAÍDA</h6>
+    </div>
+    <div class="col-sm-4">    
+    <input type="time" class="form-control" id="resultadoTempo2" required/>
+    <h6>HORA DA SAÍDA</h6>
+    </div>  
+    </div>      
 </body>
 </html>

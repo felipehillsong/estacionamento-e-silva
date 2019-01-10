@@ -26,7 +26,12 @@ $(document).ready(function()
             var mt = today.getMonth()+1;
             var yr = today.getFullYear();
             document.getElementById('tempo').value= dy+"-"+mt+"-"+yr;   
-            $("#tempo").show();         
+            $("#tempo").show();
+            var today = new Date();
+            var dy = today.getDate()+1;
+            var mt = today.getMonth()+1;
+            var yr = today.getFullYear();
+            document.getElementById('resultadoTempo').value= dy+"-"+mt+"-"+yr;          
             $("#tempo2").show().attr('type', 'time');
             $("#tempo2").show();
 			$('#servicos').val("Mensalista");
@@ -39,6 +44,11 @@ $(document).ready(function()
             var mt = today.getMonth()+1;
             var yr = today.getFullYear();
             document.getElementById('tempo').value= dy+"-"+mt+"-"+yr;
+            var today = new Date();
+            var dy = today.getDate()+1;
+            var mt = today.getMonth()+1;
+            var yr = today.getFullYear();
+            document.getElementById('resultadoTempo').value= dy+"-"+mt+"-"+yr;
             $("#tempo").show();
             $("#tempo2").show();
 			$('#servicos').val("Diarista");
@@ -51,6 +61,11 @@ $(document).ready(function()
             var mt = today.getMonth()+1;
             var yr = today.getFullYear();
             document.getElementById('tempo').value= dy+"-"+mt+"-"+yr;     
+            var today = new Date();
+            var dy = today.getDate();
+            var mt = today.getMonth()+1;
+            var yr = today.getFullYear();
+            document.getElementById('resultadoTempo').value= dy+"-"+mt+"-"+yr;
             $("#tempo").show();    
             $("#tempo2").show();         
 			$('#servicos').val("Horista");
