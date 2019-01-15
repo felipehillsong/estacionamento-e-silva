@@ -56,7 +56,19 @@ if(isset($_POST['btn_cadastro-servico'])){
             <?php 
             }
 
-}   
+} 
+date_default_timezone_set('America/Sao_Paulo');
+$date = date('d/m/Y');
+
+date_default_timezone_set('America/Sao_Paulo');
+$dateMensalista = date('d/m/Y', strtotime("+30 day"));
+
+date_default_timezone_set('America/Sao_Paulo');
+$dateDiarista = date('d/m/Y', strtotime("+1 day"));
+
+date_default_timezone_set('America/Sao_Paulo');
+$dateHorista = date('H:i');
+
 ?>
 <div class="container" id="cadastrandoone">
 <div class="row">
@@ -89,30 +101,30 @@ if(isset($_POST['btn_cadastro-servico'])){
 <div class="row">
     <div class="col-sm-4">   
     <input type="text" class="form-control" readonly id="tempo" />
-    <h6>DIA DA ENTRADA</h6>
+    <h6 id="escritaDiaEntrada">DIA DA ENTRADA</h6>
     </div>
     <div class="col-sm-4">    
-    <input type="time" class="form-control" id="tempo2" required/>
-    <h6>HORA DA ENTRADA</h6>
-    </div>
-    <div class="col-sm-2">
-    <div id="button-cadastro-servico">
-    <button class="btn" type="submit" name="btn_cadastro-servico">Salvar</button>
-    </div>  
-    </div>
-    </form>
+    <input type="time" class="form-control" id="tempo2" required />
+    <h6 id="escritaHoraEntrada">HORA DA ENTRADA</h6>
+    </div>     
     <div>
 </div>
     <div class="container"><br><br>
 <div class="row">
     <div class="col-sm-4">   
     <input type="text" class="form-control" readonly id="resultadoTempo" />
-    <h6>DIA DA SAÍDA</h6>
+    <h6 id="escritaDiaSaida">DIA DA SAÍDA</h6>
     </div>
     <div class="col-sm-4">    
     <input type="time" class="form-control" id="resultadoTempo2" readonly required />
-    <h6>HORA DA SAÍDA</h6>
+    <h6 id="escritaHoraSaida">HORA DA SAÍDA</h6><br>
     </div>  
-    </div>      
+    </div> 
+    <div class="col-sm-8">
+    <div id="button-cadastro-servico">
+    <button class="btn" type="submit" name="btn_cadastro-servico" id="botao">Salvar</button>
+    </div>  
+    </div>    
+    </form>    
 </body>
 </html>

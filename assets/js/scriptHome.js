@@ -33,7 +33,14 @@ $(document).ready(function()
             document.getElementById('resultadoTempo').value= dy+"-"+mt+"-"+yr;          
             $("#tempo2").show().attr('type', 'time');
             $("#tempo2").show();
-			$('#servicos').val("Mensalista");
+            $("#resultadoTempo").show();
+            $("#resultadoTempo2").show(); 
+            $("#escritaDiaEntrada").show();
+            $("#escritaHoraEntrada").show(); 
+            $("#escritaDiaSaida").show();
+            $("#escritaHoraSaida").show();
+            $("#botao").show(); 
+            $('#servicos').val("Mensalista");                       
         }
         if($(this).val() == "Diarista")
         {
@@ -60,6 +67,13 @@ $(document).ready(function()
             document.getElementById('resultadoTempo').value=diaAtual+"/"+mesAtual+"/"+anoAtual;             
             $("#tempo").show();
             $("#tempo2").show();
+            $("#resultadoTempo").show();
+            $("#resultadoTempo2").show(); 
+            $("#escritaDiaEntrada").show();
+            $("#escritaHoraEntrada").show(); 
+            $("#escritaDiaSaida").show();
+            $("#escritaHoraSaida").show();
+            $("#botao").show();  
 			$('#servicos').val("Diarista");
         }
         if($(this).val() == "Horista")
@@ -76,14 +90,28 @@ $(document).ready(function()
             var yr = today.getFullYear();
             document.getElementById('resultadoTempo').value= dy+"/"+mt+"/"+yr;             
             $("#tempo").show();                       
-            $("#tempo2").show();         
+            $("#tempo2").show(); 
+            $("#resultadoTempo").show();
+            $("#resultadoTempo2").show(); 
+            $("#escritaDiaEntrada").show();
+            $("#escritaHoraEntrada").show(); 
+            $("#escritaDiaSaida").show();
+            $("#escritaHoraSaida").show(); 
+            $("#botao").show();      
 			$('#servicos').val("Horista");
         }
         if($(this).val() == "nada")
         {           
             $("#servicos").hide();    
-            $("#tempo").show();
-            $("#tempo2").show(); 
+            $("#tempo").hide();
+            $("#tempo2").hide(); 
+            $("#resultadoTempo").hide();
+            $("#resultadoTempo2").hide();
+            $("#escritaDiaEntrada").hide();
+            $("#escritaHoraEntrada").hide(); 
+            $("#escritaDiaSaida").hide();
+            $("#escritaHoraSaida").hide();
+            $("#botao").hide();
 
         }
             });
