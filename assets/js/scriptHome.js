@@ -103,17 +103,17 @@ $(document).ready(function()
         if($(this).val() == "nada")
         {           
             $("#servicos").hide();    
-            $("#tempo").hide();
-            $("#tempo2").hide(); 
-            $("#resultadoTempo").hide();
-            $("#resultadoTempo2").hide();
-            $("#escritaDiaEntrada").hide();
-            $("#escritaHoraEntrada").hide(); 
-            $("#escritaDiaSaida").hide();
-            $("#escritaHoraSaida").hide();
-            $("#botao").hide();
+            $("#tempo").val("");
+            $("#tempo2").val(""); 
+            $("#resultadoTempo").val("");
+            $("#resultadoTempo2").val("");
+            $("#escritaDiaEntrada").val("");
+            $("#escritaHoraEntrada").val("");
+            $("#escritaDiaSaida").val("");
+            $("#escritaHoraSaida").val("");
 
         }
             });
                       $("#servicos").hide();
 });
+

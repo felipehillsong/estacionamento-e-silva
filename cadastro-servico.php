@@ -69,6 +69,7 @@ $dateDiarista = date('d/m/Y', strtotime("+1 day"));
 date_default_timezone_set('America/Sao_Paulo');
 $dateHorista = date('H:i');
 
+
 ?>
 <div class="container" id="cadastrandoone">
 <div class="row">
