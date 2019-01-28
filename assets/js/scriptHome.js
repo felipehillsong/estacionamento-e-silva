@@ -20,18 +20,35 @@ $(document).ready(function()
             if($(this).val() == "Mensalista")
         {
             $("#servicos").show();
-            var today = new Date();
-            var dy = today.getDate();
-            var mt = today.getMonth()+1;
-            var yr = today.getFullYear();
-            document.getElementById('tempo').value= dy+"-"+mt+"-"+yr;   
-            $("#tempo").show();
-            var today = new Date();
-            var dy = today.getDate();
-            var mt = today.getMonth()+2;
-            var yr = today.getFullYear();
-            document.getElementById('resultadoTempo').value= dy+"-"+mt+"-"+yr;          
-            $("#tempo2").show().attr('type', 'time');
+            var diaHoje = new Date();
+            var mesHoje = new Date();
+            var horaHoje = new Date();
+            var minutosHoje = new Date();
+            diaHoje.getDate();
+            mesHoje.setMonth(mesHoje.getMonth()+1);
+            diaHoje.getFullYear();
+            horaHoje.getHours();
+            minutosHoje.getMinutes();
+            var diaAmanha = new Date();
+            var mesAmanha = new Date();            
+            diaAmanha.getDate();
+            mesAmanha.setMonth(diaAmanha.getMonth()+2);
+            diaAmanha.getFullYear();   
+            
+            function addZero(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                }
+                return i;
+              }
+            
+            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
+           
+            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesAmanha.getMonth()+"/"+diaAmanha.getFullYear();
+
+            document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
+
+            document.getElementById('resultadoTempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
             $("#tempo2").show();
             $("#resultadoTempo").show();
             $("#resultadoTempo2").show(); 
@@ -45,16 +62,35 @@ $(document).ready(function()
         if($(this).val() == "Diarista")
         {
             $("#servicos").show();
-            var dia = new Date();
-            var mes = new Date();
-            dia.setDate(dia.getDate()+1);
-            mes.setMonth(dia.getMonth()+1);
-            dia.getFullYear();
+            var diaHoje = new Date();
+            var mesHoje = new Date();
+            var horaHoje = new Date();
+            var minutosHoje = new Date();
+            diaHoje.getDate();
+            mesHoje.setMonth(mesHoje.getMonth()+1);
+            diaHoje.getFullYear();
+            horaHoje.getHours();
+            minutosHoje.getMinutes();
+            var diaAmanha = new Date();
+            var mesAmanha = new Date();
+            diaAmanha.setDate(diaAmanha.getDate()+1);
+            mesAmanha.setMonth(diaAmanha.getMonth()+1);
+            diaAmanha.getFullYear();
             
+            function addZero(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                }
+                return i;
+              }
             
-            document.getElementById('tempo').value=dia.getDate()+"/"+mes.getMonth()+"/"+dia.getFullYear();
+            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
            
-            document.getElementById('resultadoTempo').value=diaAtual+"/"+mesAtual+"/"+anoAtual;             
+            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesAmanha.getMonth()+"/"+diaAmanha.getFullYear();
+            
+            document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
+
+            document.getElementById('resultadoTempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
             $("#tempo").show();
             $("#tempo2").show();
             $("#resultadoTempo").show();
@@ -69,16 +105,37 @@ $(document).ready(function()
         if($(this).val() == "Horista")
         {
             $("#servicos").show();
-            var today = new Date();
-            var dy = today.getDate();
-            var mt = today.getMonth()+1;
-            var yr = today.getFullYear();
-            document.getElementById('tempo').value= dy+"/"+mt+"/"+yr;     
-            var today = new Date();
-            var dy = today.getDate();
-            var mt = today.getMonth()+1;
-            var yr = today.getFullYear();
-            document.getElementById('resultadoTempo').value= dy+"/"+mt+"/"+yr;             
+            var diaHoje = new Date();
+            var mesHoje = new Date();
+            var horaHoje = new Date();
+            var minutosHoje = new Date();
+            diaHoje.getDate();
+            mesHoje.setMonth(mesHoje.getMonth()+1);
+            diaHoje.getFullYear();
+            horaHoje.getHours();
+            minutosHoje.getMinutes();
+            var diaAmanha = new Date();
+            var HoraAmanha = new Date();            
+            diaAmanha.getDate();
+            mesHoje.getMonth();
+            diaAmanha.getFullYear();
+            HoraAmanha.setHours(horaHoje.getHours()+1);        
+            
+            function addZero(i) {
+                if (i < 10) {
+                  i = "0" + i;
+                }
+                return i;
+              }   
+            
+            
+            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
+           
+            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesHoje.getMonth()+"/"+diaAmanha.getFullYear();    
+            
+            document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
+
+            document.getElementById('resultadoTempo2').value=addZero(HoraAmanha.getHours())+":"+addZero(minutosHoje.getMinutes());
             $("#tempo").show();                       
             $("#tempo2").show(); 
             $("#resultadoTempo").show();

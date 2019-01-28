@@ -105,7 +105,7 @@ $dateHorista = date('H:i');
     <h6 id="escritaDiaEntrada">DIA DA ENTRADA</h6>
     </div>
     <div class="col-sm-4">    
-    <input type="time" class="form-control" id="tempo2" required />
+    <input type="text" class="form-control" readonly id="tempo2" />
     <h6 id="escritaHoraEntrada">HORA DA ENTRADA</h6>
     </div>     
     <div>
@@ -117,7 +117,7 @@ $dateHorista = date('H:i');
     <h6 id="escritaDiaSaida">DIA DA SAÍDA</h6>
     </div>
     <div class="col-sm-4">    
-    <input type="time" class="form-control" id="resultadoTempo2" readonly required />
+    <input type="text" class="form-control" readonly id="resultadoTempo2" />
     <h6 id="escritaHoraSaida">HORA DA SAÍDA</h6><br>
     </div>  
     </div> 
