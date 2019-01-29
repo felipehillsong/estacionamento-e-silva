@@ -20,20 +20,23 @@ $(document).ready(function()
             if($(this).val() == "Mensalista")
         {
             $("#servicos").show();
-            var diaHoje = new Date();
-            var mesHoje = new Date();
+            function diaAtual(dias){
+                var diaHoje        = new Date();
+                var dataHoje    = new Date(diaHoje.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataHoje.getDate() + "/" + (dataHoje.getMonth() + 1) + "/" + dataHoje.getFullYear();
+            }
             var horaHoje = new Date();
             var minutosHoje = new Date();
-            diaHoje.getDate();
-            mesHoje.setMonth(mesHoje.getMonth()+1);
-            diaHoje.getFullYear();
-            horaHoje.getHours();
-            minutosHoje.getMinutes();
-            var diaAmanha = new Date();
-            var mesAmanha = new Date();            
-            diaAmanha.getDate();
-            mesAmanha.setMonth(diaAmanha.getMonth()+2);
-            diaAmanha.getFullYear();   
+            
+            var novoDia = diaAtual(0);  
+
+            function adicionarDiasData(dias){
+                var mesAmanha        = new Date();
+                var dataVenc    = new Date(mesAmanha.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataVenc.getDate() + "/" + (dataVenc.getMonth() + 1) + "/" + dataVenc.getFullYear();
+            }
+            
+            var novaData = adicionarDiasData(30);                
             
             function addZero(i) {
                 if (i < 10) {
@@ -42,9 +45,9 @@ $(document).ready(function()
                 return i;
               }
             
-            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
+            document.getElementById('tempo').value=novoDia;
            
-            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesAmanha.getMonth()+"/"+diaAmanha.getFullYear();
+            document.getElementById('resultadoTempo').value=novaData;
 
             document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
 
@@ -61,21 +64,23 @@ $(document).ready(function()
         }
         if($(this).val() == "Diarista")
         {
-            $("#servicos").show();
-            var diaHoje = new Date();
-            var mesHoje = new Date();
+            function diaAtual(dias){
+                var diaHoje        = new Date();
+                var dataHoje    = new Date(diaHoje.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataHoje.getDate() + "/" + (dataHoje.getMonth() + 1) + "/" + dataHoje.getFullYear();
+            }
             var horaHoje = new Date();
             var minutosHoje = new Date();
-            diaHoje.getDate();
-            mesHoje.setMonth(mesHoje.getMonth()+1);
-            diaHoje.getFullYear();
-            horaHoje.getHours();
-            minutosHoje.getMinutes();
-            var diaAmanha = new Date();
-            var mesAmanha = new Date();
-            diaAmanha.setDate(diaAmanha.getDate()+1);
-            mesAmanha.setMonth(diaAmanha.getMonth()+1);
-            diaAmanha.getFullYear();
+            
+            var novoDia = diaAtual(0);  
+
+            function adicionarDiasData(dias){
+                var diaAmanha        = new Date();
+                var dataVenc    = new Date(diaAmanha.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataVenc.getDate() + "/" + (dataVenc.getMonth() + 1) + "/" + dataVenc.getFullYear();
+            }
+            
+            var novaData = adicionarDiasData(1);       
             
             function addZero(i) {
                 if (i < 10) {
@@ -84,9 +89,9 @@ $(document).ready(function()
                 return i;
               }
             
-            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
+            document.getElementById('tempo').value=novoDia;
            
-            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesAmanha.getMonth()+"/"+diaAmanha.getFullYear();
+            document.getElementById('resultadoTempo').value=novaData;
             
             document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
 
@@ -105,21 +110,25 @@ $(document).ready(function()
         if($(this).val() == "Horista")
         {
             $("#servicos").show();
-            var diaHoje = new Date();
-            var mesHoje = new Date();
+            function diaAtual(dias){
+                var diaHoje        = new Date();
+                var dataHoje    = new Date(diaHoje.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataHoje.getDate() + "/" + (dataHoje.getMonth() + 1) + "/" + dataHoje.getFullYear();
+            }
             var horaHoje = new Date();
             var minutosHoje = new Date();
-            diaHoje.getDate();
-            mesHoje.setMonth(mesHoje.getMonth()+1);
-            diaHoje.getFullYear();
-            horaHoje.getHours();
-            minutosHoje.getMinutes();
-            var diaAmanha = new Date();
-            var HoraAmanha = new Date();            
-            diaAmanha.getDate();
-            mesHoje.getMonth();
-            diaAmanha.getFullYear();
-            HoraAmanha.setHours(horaHoje.getHours()+1);        
+            var horaAmanha = new Date();
+            
+            var novoDia = diaAtual(0);  
+
+            function adicionarDiasData(dias){
+                var diaAmanha        = new Date();                
+                var dataVenc    = new Date(diaAmanha.getTime() + (dias * 24 * 60 * 60 * 1000));
+                return dataVenc.getDate() + "/" + (dataVenc.getMonth() + 1) + "/" + dataVenc.getFullYear();
+            }
+            
+            var novaData = adicionarDiasData(0);  
+            horaAmanha.setHours(horaAmanha.getHours()+1);        
             
             function addZero(i) {
                 if (i < 10) {
@@ -129,13 +138,13 @@ $(document).ready(function()
               }   
             
             
-            document.getElementById('tempo').value=diaHoje.getDate()+"/"+mesHoje.getMonth()+"/"+diaHoje.getFullYear();
+            document.getElementById('tempo').value=novoDia;
            
-            document.getElementById('resultadoTempo').value=diaAmanha.getDate()+"/"+mesHoje.getMonth()+"/"+diaAmanha.getFullYear();    
+            document.getElementById('resultadoTempo').value=novaData;
             
             document.getElementById('tempo2').value=addZero(horaHoje.getHours())+":"+addZero(minutosHoje.getMinutes());
 
-            document.getElementById('resultadoTempo2').value=addZero(HoraAmanha.getHours())+":"+addZero(minutosHoje.getMinutes());
+            document.getElementById('resultadoTempo2').value=addZero(horaAmanha.getHours())+":"+addZero(minutosHoje.getMinutes());
             $("#tempo").show();                       
             $("#tempo2").show(); 
             $("#resultadoTempo").show();
