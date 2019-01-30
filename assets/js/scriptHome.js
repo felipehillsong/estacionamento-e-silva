@@ -64,6 +64,7 @@ $(document).ready(function()
         }
         if($(this).val() == "Diarista")
         {
+            $("#servicos").show();
             function diaAtual(dias){
                 var diaHoje        = new Date();
                 var dataHoje    = new Date(diaHoje.getTime() + (dias * 24 * 60 * 60 * 1000));
