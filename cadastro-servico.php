@@ -26,18 +26,23 @@ if(isset($_POST['btn_cadastro-servico'])){
     $sql->bindValue(":data_saida", $data_saida);
     $sql->bindValue(":hora_saida", $hora_saida);
     $sql->execute(); 
-    ?>
-    <div class="container">
-    <div class="alert alert-success alert-dismissible fade show" role="alert">
-    <?php echo "Serviço cadastrado com sucesso!"; ?>
-    <button class="close" data-dismiss="alert" aria-label="fechar">
-    <span aria-hidden="true">&times;</span>
-    </button>
-    </div>
-    </div>
-    <?php 
-    }
 
+    $sql = "SELECT * FROM historico";
+        $sql = $pdo->query($sql);
+
+        if($sql->rowCount () > 0) {
+
+            foreach($sql->fetchAll() as $ticket) {
+				$_SESSION['ticket'] = $ticket["id"];
+    
+            }
+        }
+    $mensagem = "Serviço cadastrado com sucesso!";
+    $_SESSION['mensagem'] = $mensagem; 
+    header("Location: cadastro.php");
+    die();
+    }
+        
     if($servico == 'Diarista'){
         $sql = $pdo->prepare("INSERT INTO historico (servico, nome, veiculo, placa, data_entrada, hora_entrada, data_saida, hora_saida) VALUES (:servico, :nome, :veiculo, :placa, :data_entrada, :hora_entrada, :data_saida, :hora_saida)");
         $sql->bindValue(":servico", $servico);    
@@ -49,16 +54,22 @@ if(isset($_POST['btn_cadastro-servico'])){
         $sql->bindValue(":data_saida", $data_saida);
         $sql->bindValue(":hora_saida", $hora_saida);
         $sql->execute(); 
-        ?>
-        <div class="container">
-        <div class="alert alert-success alert-dismissible fade show" role="alert">
-        <?php echo "Serviço cadastrado com sucesso!"; ?>
-        <button class="close" data-dismiss="alert" aria-label="fechar">
-        <span aria-hidden="true">&times;</span>
-        </button>
-        </div>
-        </div>
-        <?php 
+
+        $sql = "SELECT * FROM historico";
+        $sql = $pdo->query($sql);
+
+        if($sql->rowCount () > 0) {
+
+            foreach($sql->fetchAll() as $ticket) {
+				$_SESSION['ticket'] = $ticket["id"];
+    
+            }
+        }
+        
+        $mensagem = "Serviço cadastrado com sucesso!";
+        $_SESSION['mensagem'] = $mensagem; 
+        header("Location: cadastro.php");
+        die();
         }
         
         if($servico == 'Horista'){
@@ -72,31 +83,26 @@ if(isset($_POST['btn_cadastro-servico'])){
             $sql->bindValue(":data_saida", $data_saida);
             $sql->bindValue(":hora_saida", $hora_saida);
             $sql->execute(); 
-            ?>
-            <div class="container">
-            <div class="alert alert-success alert-dismissible fade show" role="alert">
-            <?php echo "Serviço cadastrado com sucesso!"; ?>
-            <button class="close" data-dismiss="alert" aria-label="fechar">
-            <span aria-hidden="true">&times;</span>
-            </button>
-            </div>
-            </div>
-            <?php 
+
+            $sql = "SELECT * FROM historico";
+            $sql = $pdo->query($sql);
+    
+            if($sql->rowCount () > 0) {
+    
+                foreach($sql->fetchAll() as $ticket) {
+                    $_SESSION['ticket'] = $ticket["id"];
+        
+                }
+            }
+            
+            $mensagem = "Serviço cadastrado com sucesso!";
+            $_SESSION['mensagem'] = $mensagem; 
+            header("Location: cadastro.php");
+            die();
             }
 
-} 
-date_default_timezone_set('America/Sao_Paulo');
-$date = date('d/m/Y');
-
-date_default_timezone_set('America/Sao_Paulo');
-$dateMensalista = date('d/m/Y', strtotime("+30 day"));
-
-date_default_timezone_set('America/Sao_Paulo');
-$dateDiarista = date('d/m/Y', strtotime("+1 day"));
-
-date_default_timezone_set('America/Sao_Paulo');
-$dateHorista = date('H:i');
-
+}
+    
 
 ?>
 <form method="POST">

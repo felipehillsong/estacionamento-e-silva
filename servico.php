@@ -45,7 +45,8 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
         $_SESSION['placa'] = $cliente['placa'];
          
     }else{
-        $cliente['placa'] = "Usuário Inexistente!";             
+        //foram feitos apenas o nome e placa inexistente, porque se se todos aparecerem como inexistentes, o usuario conseguirar ir para a tela de cadastro-servico
+        $cliente['placa'] = "Usuário Inexistente!";
     }    
          
 } 
@@ -77,19 +78,19 @@ if(isset($_POST['btn_pesquisa_para_servico_placa'])){
 
                 <div class="row">
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa1" placeholder="Resultado" class="form-control" id="input1" readonly value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa1" placeholder="Resultado" class="form-control" id="input1" readonly value="<?php echo isset($cliente['nome']) ? $cliente['nome'] : '' ; //se o nome ou a placa foram setados, o nome vai imprimir, se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
                     </div>
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input2" readonly value="<?php echo isset($cliente['cpf']) ? $cliente['cpf'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input2" readonly value="<?php echo isset($cliente['cpf']) ? $cliente['cpf'] : '' ; ?>">
                     </div>
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input3" readonly value="<?php echo isset($cliente['telefone']) ? $cliente['telefone'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input3" readonly value="<?php echo isset($cliente['telefone']) ? $cliente['telefone'] : '' ; ?>">
                     </div>
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input4" readonly value="<?php echo isset($cliente['veiculo']) ? $cliente['veiculo'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input4" readonly value="<?php echo isset($cliente['veiculo']) ? $cliente['veiculo'] : '' ; ?>">
                     </div>
                     <div class="col-sm-8 col-md-10 col-lg-7">
-                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input5" readonly value="<?php echo isset($cliente['placa']) ? $cliente['placa'] : '' ; //se o nome foi setado o nome vai imprimir se nao vai imprimir nome inexistente, o nome inexistente foi definido la em cima nos codigos php?>">
+                        <input type="text" name="pesquisa" placeholder="Resultado" class="form-control" id="input5" readonly value="<?php echo isset($cliente['placa']) ? $cliente['placa'] : '' ; //se o nome ou a placa foram setados, a placa vai imprimir se nao vai imprimir placa inexistente, a placa inexistente foi definido la em cima nos codigos php?>">
                     </div>
                     <!-- o botão tera esse tamanho quando começar a diminuir a tela -->
                     <div class="col-sm-4 col-md-2 col-lg-5">

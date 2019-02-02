@@ -2,6 +2,21 @@
 require 'config.php';
 session_start();
 include_once("header.php");
+if(isset($_SESSION['mensagem'])){
+    ?>
+    <div class="container">
+    <div class="alert alert-success alert-dismissible fade show" role="alert">
+    <?php echo $_SESSION['mensagem']. " O número do serviço é: ". $_SESSION['ticket'];   
+    ?>
+    <button class="close" data-dismiss="alert" aria-label="fechar">
+    <span aria-hidden="true">&times;</span>
+    </button>
+    </div>
+    </div>
+    <?php
+    unset($_SESSION['mensagem']);
+    }
+    
 
 if(empty($_SESSION['start'])){
     header("Location:login.php");
@@ -56,7 +71,7 @@ if(isset($_POST['cadastro_cliente'])){
 ?>
         <div class="formularioCadastro">
         <form method="POST" id="formCadastro">
-            <h2>Cadastro</h2>
+            <h2 class="text-center">Cadastro</h2>
             <input type="text" name="nome" placeholder="Nome" class="form-control" required>
             <input type="text" name="cpf" placeholder="CPF" class="form-control" required>
             <input type="text" name="telefone" placeholder="Telefone" class="form-control" required>
