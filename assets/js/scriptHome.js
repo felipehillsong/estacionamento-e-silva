@@ -173,4 +173,8 @@ $(document).ready(function()
             });
                       $("#servicos").hide();
 });
-
+$(function() {
+	$('#pesquisaServiço').on('click', function() {
+        $("#resultadoPesquisa").hide();
+	});
+});

@@ -102,8 +102,6 @@ if(isset($_POST['btn_cadastro-servico'])){
             }
 
 }
-    
-
 ?>
 <form method="POST">
 <div class="container" id="cadastrandoone">
